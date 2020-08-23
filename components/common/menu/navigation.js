@@ -1,20 +1,24 @@
 import styled from 'styled-components'
 import React from 'react'
-import MenuItem from './menu-item'
+import Menu from './menu'
+import Wrapper from 'common/wrapper'
 
-const NavigationStyled = styled.nav`
-  display: flex;
-  flex: 1;
-  border: 1px solid;
-  justify-content: space-between;
+const WrapperStyled = styled(Wrapper)`
+  width: 100%;
+`
+const NavigationStyled = styled.header`
   position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
 `
 
 function Navigation() {
   return (
     <NavigationStyled>
-      <p>LOGO</p>
-      <MenuItem />
+      <WrapperStyled>
+        <Menu />
+      </WrapperStyled>
     </NavigationStyled>
   )
 }

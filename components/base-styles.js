@@ -18,6 +18,9 @@ const DefaultStyles = createGlobalStyle`
     --gray: ${({ theme }) => theme.gray};
     --lightGray: ${({ theme }) => theme.lightGray};
   }
+  * {
+    margin: 0;
+  }
   html {
     scroll-behavior: smooth;
   }
@@ -25,7 +28,6 @@ const DefaultStyles = createGlobalStyle`
     list-style: none;
   }
   body {
-    margin: 0;
     font-family: var(--primaryFont);
     background: var(--primaryContrast);
   }
