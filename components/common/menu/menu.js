@@ -20,35 +20,69 @@ const menux = [
   }
 ]
 const MenuStyled = styled.nav`
-  display: flex;
-  justify-content: space-between;
   height: inherit;
   padding: 1em 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  transform: translateX(250px);
+  transition: 0.3s transform;
+  background: var(--primary);
+  height: 100vh;
+  max-width: 200px;
+  width: 100%;
   .items {
     padding: 0;
     margin: 0;
-    height: inherit;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
   }
-  .items, li {
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-  }
-  li {
-    margin-right: 20px;
+  .items li {
+    color: white;
+    border-bottom: 1px solid;
     list-style: none;
     cursor: pointer;
-    height: 100%;
+    :hover {
+      background: #283E71;
+    }
   }
-  @media screen and (max-width: 1000px) {
-    display: none;
+  p, li {
+    padding: 1em;
+  }
+  .logo {
+    margin-top: 1.5em;
+  }
+  @media screen and (min-width: 768px) {
+    position: initial;
+    background: initial;
+    height: inherit;
+    transform: translateX(0px);
+
+    max-width: initial;
+    display: flex;
+    justify-content: space-between;
+    .items {
+      color : var(--primary);
+      display: flex;
+    }
+    .items li {
+      color: inherit;
+      border-bottom: none;
+    }
+    .logo {
+      margin-top: 0;
+    }
   } 
 `
 
-function Menu() {
+function Menu({ className }) {
   return (
-    <MenuStyled>
-      <p>LOGO</p>
+    <MenuStyled className={className}>
+      <p className="logo">LOGO</p>
       <ul className="items">
         {menux.map((item, index) => (
           <li key={index}>
