@@ -40,6 +40,9 @@ const MenuStyled = styled.nav`
     cursor: pointer;
     height: 100%;
   }
+  @media screen and (max-width: 1000px) {
+    display: none;
+  } 
 `
 
 function Menu() {

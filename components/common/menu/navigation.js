@@ -4,7 +4,9 @@ import Menu from './menu'
 import Wrapper from 'common/wrapper'
 
 const WrapperStyled = styled(Wrapper)`
-  width: 100%;
+  @media screen and (min-width: 1280px) {
+    width: 100%;
+  }
 `
 const NavigationStyled = styled.header`
   position: fixed;

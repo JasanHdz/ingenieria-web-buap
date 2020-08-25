@@ -18,36 +18,91 @@ const ButtonStyled = styled(Button)`
 
 const WrapperStyled = styled(Wrapper)`
   height: 100%;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 `
 const HeroStyled = styled.section`
-  padding-top: 51px;
-  height: calc(100vh - 51px);
+  padding-top: 2.5em;
+  height: calc(100vh - 40px);
   background: url('/images/oval.png');
   background-repeat: no-repeat;
   background-size: 611.69px 767.85px;
-  
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: inherit;
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2.5em;
   }
   .about {
-    max-width: 290px;
-    /* border: 1px solid; */
+    align-self: flex-start;
     h1 {
-      font-size: 64px;
+      font-size: 32px;
       color: #283E71;
     }
     h4 {
-      font-size: 32px;
+      font-size: 21px;
       color: #1BAFAF;
-      margin: 1rem 0;
+      margin: .5rem 0;
     }
     .text {
+      font-size: 16px;
+      line-height: 21px;
       color: var(--primary);
-      font-size: 21px;
-      line-height: 29px;
+    }
+    button {
+      display: none;
+    }
+  }
+  .hero {
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 500px) {
+    .hero img {
+      max-width: 560px;
+    }
+    .hero-container {
+      grid-row-gap: 0;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .hero img {
+      max-width: none;
+    }
+    .hero-container {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .about {
+      max-width: 290px;
+      h1 {
+        font-size: 64px;
+      }
+      h4 {
+        font-size: 32px;
+      }
+      .text {
+        font-size: 21px;
+        line-height: 29px;
+      }
+      button {
+        display: block;
+      }
+    }
+    .hero button {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    padding-top: 51px;
+    height: calc(100vh - 51px);
+    .hero img {
+      max-width: 728.4px;
     }
   }
 `
@@ -56,7 +111,7 @@ function Hero() {
   return (
     <HeroStyled>
       <WrapperStyled>
-        <div className="container">
+        <div className="hero-container">
           <div className="about">
             <h1>Ingeniería Web</h1>
             <h4>Equipo 4</h4>
@@ -65,7 +120,10 @@ function Hero() {
             ))}
             <ButtonStyled>Comenzar</ButtonStyled>
           </div>
-          <img width="728.4" height="513.07" src="/images/teams.png" alt="team" />
+          <div className="hero">
+            <img width="288" src="/images/teams.png" alt="team" />
+            <ButtonStyled>Comenzar</ButtonStyled>
+          </div>
         </div>
       </WrapperStyled>
     </HeroStyled>
