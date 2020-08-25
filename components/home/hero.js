@@ -29,11 +29,12 @@ const HeroStyled = styled.section`
   background: url('/images/oval.png');
   background-repeat: no-repeat;
   background-size: 611.69px 767.85px;
+  /* clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 30px), 0px 100%); */
 
   .hero-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: 2.5em;
+    grid-row-gap: 1.5em;
   }
   .about {
     align-self: flex-start;
@@ -62,6 +63,7 @@ const HeroStyled = styled.section`
     }
   }
   @media screen and (min-width: 500px) {
+    clip-path: none;
     .hero img {
       max-width: 560px;
     }

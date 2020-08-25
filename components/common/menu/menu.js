@@ -7,7 +7,7 @@ const menux = [
     url: '/'
   },
   {
-    title: 'Practicas',
+    title: 'Prácticas',
     url: '/#practicas'
   },
   {
@@ -35,11 +35,11 @@ const MenuStyled = styled.nav`
   max-width: 200px;
   width: 100%;
   .items {
-    padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: 10px;
+    padding-top: 10px;
+    padding-left: 0;
   }
   .items li {
     color: white;
@@ -50,7 +50,7 @@ const MenuStyled = styled.nav`
       background: #283E71;
     }
   }
-  p, li {
+  li, .logo {
     padding: 1em;
   }
   .logo {
@@ -68,6 +68,7 @@ const MenuStyled = styled.nav`
     .items {
       color : var(--primary);
       display: flex;
+      padding: 0;
     }
     .items li {
       color: inherit;
