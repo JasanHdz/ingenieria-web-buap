@@ -1,8 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
-import { AiFillInstagram, AiFillTwitterSquare } from 'react-icons/ai'
-import { IoLogoFacebook } from 'react-icons/io'
+import { SecondaryButton } from 'common/button'
+import { SiGmail } from 'react-icons/si'
 
+const ButtonStyled = styled(SecondaryButton)`
+  border-radius: 30px;
+  border: 1px solid;
+  color: #283E71;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+  width: 100%;
+  transition: .3s;
+  box-sizing: border-box;
+  svg {
+    margin-left: 20px;
+  }
+  &:active {
+    transform: scale(.8);
+  }
+`
 const TeamItemStyled = styled.article`
   min-height: 400px;
   border: 1px solid black;
@@ -39,13 +55,8 @@ const TeamItemStyled = styled.article`
     border-bottom: 1px solid rgba(40, 62, 113, .5);
     width: 100%;
   }
-  .social {
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 30px);
-    justify-content: center;
-    grid-column-gap: 2rem;
-    
+  .description {
+    line-height: 22px;
   }
   @media screen and (max-width: 1024px) {
     &:last-child {
@@ -53,7 +64,7 @@ const TeamItemStyled = styled.article`
     }
   }
 `
-function TeamItem({ url, background, names }) {
+function TeamItem({ url, background, names, description, email }) {
   return (
     <TeamItemStyled background={background}>
       <figure className="avatar">
@@ -62,13 +73,9 @@ function TeamItem({ url, background, names }) {
       <h2 className="names">{names}</h2>
       <h3 className="topic">Estudiante en Tecnologías de la información</h3>
       <h4 className="about">Sobre mí</h4>
-      <p className="description">lorem ipsu lorem ipsu lorem ipsu lorem ipsu lorem ipsu lorem ipsu lorem ipsu lorem ipsu lorem ipsu lorem ipsu </p>
+      <p className="description">{description}</p>
       <div className="separator"></div>
-      <div className="social">
-        <a><AiFillTwitterSquare size={30} /></a>
-        <a><AiFillInstagram size={30} /></a>
-        <a><IoLogoFacebook size={30} /></a>
-      </div>
+      <ButtonStyled href={`mailto:${email}`} as="a" background="#283E71">Contactar <SiGmail color="#c84f44" size={16} /></ButtonStyled>
     </TeamItemStyled>
   )
 }

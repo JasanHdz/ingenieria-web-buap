@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const BottomStyled = styled.div`
   min-height: 100vh;
-  margin-top: 40px;
   box-sizing: border-box;
   background: url('/images/wave.svg');
   background-repeat: no-repeat;

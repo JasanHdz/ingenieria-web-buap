@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const menux = [
   {
@@ -15,10 +16,15 @@ const menux = [
     url: '/proyecto'
   },
   {
-    title: 'Acerca de',
-    url: '/about'
+    title: 'Equipo',
+    url: '/#team'
   }
 ]
+
+const Li = styled.li`
+  background: ${({ hover }) => hover && '#283E71'};
+`
+
 const MenuStyled = styled.nav`
   height: inherit;
   padding: 1em 0;
@@ -46,6 +52,7 @@ const MenuStyled = styled.nav`
     border-bottom: 1px solid;
     list-style: none;
     cursor: pointer;
+    background: attr(hover);
     :hover {
       background: #283E71;
     }
@@ -81,16 +88,17 @@ const MenuStyled = styled.nav`
 `
 
 function Menu({ className }) {
+  const pathname = useRouter().asPath
   return (
     <MenuStyled className={className}>
       <p className="logo">LOGO</p>
       <ul className="items">
         {menux.map((item, index) => (
-          <li key={index}>
+          <Li hover={pathname === item.url} key={index}>
             <Link href={item.url}>
               <a>{item.title}</a>
             </Link>
-          </li>
+          </Li>
         ))}
       </ul>
     </MenuStyled>

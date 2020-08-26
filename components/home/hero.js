@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Wrapper from 'common/wrapper'
 import { Button } from 'common/button'
+import { useRouter } from 'next/router'
 
 const names = [
   'Garcí­a López Luis Alberto',
   'Morales Arcos Julio Daniel',
-  'Perez Xilo Miguel Ángel',
+  'Pérez Xilo Miguel Ángel',
   'Hernández Bautista Jasan',
 ]
 
@@ -14,6 +15,7 @@ const ButtonStyled = styled(Button)`
   border-radius: 30px;
   margin-top: 2.5rem;
   width: 181px;
+  margin-bottom: 3em;
 `
 
 const WrapperStyled = styled(Wrapper)`
@@ -25,12 +27,10 @@ const WrapperStyled = styled(Wrapper)`
 `
 const HeroStyled = styled.section`
   padding-top: 2.5em;
-  height: calc(100vh - 40px);
   background: url('/images/oval.png');
   background-repeat: no-repeat;
   background-size: 611.69px 767.85px;
   /* clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 30px), 0px 100%); */
-
   .hero-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -110,6 +110,10 @@ const HeroStyled = styled.section`
 `
 
 function Hero() {
+  const router = useRouter()
+  function handleClick() {
+    router.push('/#team')
+  }
   return (
     <HeroStyled>
       <WrapperStyled>
@@ -120,11 +124,11 @@ function Hero() {
             {names.map((name, index) => (
               <p key={index} className="text">{name}</p>
             ))}
-            <ButtonStyled>Comenzar</ButtonStyled>
+            <ButtonStyled onClick={handleClick}>Comenzar</ButtonStyled>
           </div>
           <div className="hero">
             <img width="288" src="/images/teams.png" alt="team" />
-            <ButtonStyled>Comenzar</ButtonStyled>
+            <ButtonStyled onClick={handleClick}>Comenzar</ButtonStyled>
           </div>
         </div>
       </WrapperStyled>
