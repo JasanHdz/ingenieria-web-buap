@@ -20,6 +20,8 @@ const NavigationStyled = styled.header`
   right: 0;
   left: 0;
   top: 0;
+  background: ${({ background }) => background};
+  color : ${({ color }) => color ? color : 'var(--primary)'};
   .toggle-button {
     position: relative;
     float: right;
@@ -64,9 +66,9 @@ const NavigationStyled = styled.header`
   }
 `
 
-function Navigation() {
+function Navigation({ background, color }) {
   return (
-    <NavigationStyled>
+    <NavigationStyled background={background} color={color}>
       <WrapperStyled>
         <input type="checkbox" className="checkbox" id="toggle-button" />
         <label htmlFor="toggle-button" className="toggle-button">

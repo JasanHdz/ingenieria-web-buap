@@ -6,9 +6,9 @@ import { useRouter } from 'next/router'
 
 const names = [
   'Garcí­a López Luis Alberto',
+  'Hernández Bautista Jasan A.',
   'Morales Arcos Julio Daniel',
   'Pérez Xilo Miguel Ángel',
-  'Hernández Bautista Jasan',
 ]
 
 const ButtonStyled = styled(Button)`
@@ -27,10 +27,9 @@ const WrapperStyled = styled(Wrapper)`
 `
 const HeroStyled = styled.section`
   padding-top: 2.5em;
-  background: url('/images/oval.png');
+  background: url('/images/oval@2x.png');
   background-repeat: no-repeat;
-  background-size: 611.69px 767.85px;
-  /* clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 30px), 0px 100%); */
+  background-position: left -292.1px top -42.33px;
   .hero-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -120,7 +119,7 @@ function Hero() {
         <div className="hero-container">
           <div className="about">
             <h1>Ingeniería Web</h1>
-            <h4>Equipo 4</h4>
+            <h4>Equipo 11</h4>
             {names.map((name, index) => (
               <p key={index} className="text">{name}</p>
             ))}

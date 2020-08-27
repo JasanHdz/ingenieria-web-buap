@@ -20,11 +20,13 @@ const ButtonStyled = styled(SecondaryButton)`
   }
 `
 const TeamItemStyled = styled.article`
-  min-height: 400px;
   border: 1px solid black;
   text-align: center;
   border-radius: 14px;
   padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .avatar {
     margin: 0 auto;
     background: ${({ background }) => background};
@@ -67,13 +69,15 @@ const TeamItemStyled = styled.article`
 function TeamItem({ url, background, names, description, email }) {
   return (
     <TeamItemStyled background={background}>
-      <figure className="avatar">
-        <img width="155" height="155" src={url} alt="avatar" />
-      </figure>
-      <h2 className="names">{names}</h2>
-      <h3 className="topic">Estudiante en Tecnologías de la información</h3>
-      <h4 className="about">Sobre mí</h4>
-      <p className="description">{description}</p>
+      <div>
+        <figure className="avatar">
+          <img width="155" height="155" src={url} alt="avatar" />
+        </figure>
+        <h2 className="names">{names}</h2>
+        <h3 className="topic">Estudiante en Tecnologías de la información</h3>
+        <h4 className="about">Sobre mí</h4>
+        <p className="description">{description}</p>
+      </div>
       <div className="separator"></div>
       <ButtonStyled href={`mailto:${email}`} as="a" background="#283E71">Contactar <SiGmail color="#c84f44" size={16} /></ButtonStyled>
     </TeamItemStyled>

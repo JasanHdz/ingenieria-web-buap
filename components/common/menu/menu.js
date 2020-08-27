@@ -13,7 +13,7 @@ const menux = [
   },
   {
     title: 'Proyecto',
-    url: '/proyecto'
+    url: '/project'
   },
   {
     title: 'Equipo',
@@ -52,16 +52,13 @@ const MenuStyled = styled.nav`
     border-bottom: 1px solid;
     list-style: none;
     cursor: pointer;
-    background: attr(hover);
-    :hover {
-      background: #283E71;
-    }
   }
   li, .logo {
     padding: 1em;
   }
   .logo {
     margin-top: 1.5em;
+    color: white;
   }
   @media screen and (min-width: 768px) {
     position: initial;
@@ -73,15 +70,19 @@ const MenuStyled = styled.nav`
     display: flex;
     justify-content: space-between;
     .items {
-      color : var(--primary);
+      color : inherit;
       display: flex;
       padding: 0;
     }
     .items li {
       color: inherit;
       border-bottom: none;
+      &:hover {
+        background: #283E71;
+      }
     }
     .logo {
+      color: inherit;
       margin-top: 0;
     }
   } 
