@@ -3,24 +3,28 @@
     "title": "Actividad 1: Página Web",
     "evidence": "/images/evidence/website.png",
     "description": "La practica consiste en realizar una página web (portafolio de actividades), para llevar un registro de actividades, la cuál debe ser servida desde un host. Nuestro equipo construyo un servidor en NodeJS para servir el html y css del sitio web, el cual fue alojado en servicio en la nube de vercel.com, en donde vercel nos brinda un host seguro.",
-    "date": "Viernes 21 de agosto del 2020"
+    "date": "Viernes 21 de agosto del 2020",
+    "link": "https://ingenieria-web.vercel.app/"
   },
   {
     "title": "Actividad 2: Linea de tiempo de la historia de internet",
-    "evidence": "/images/evidence/placeholder.png",
+    "evidence": "/images/evidence/time-line.jpg",
     "description": "describir que hicieron como lo hicieron, etc.",
-    "date": "Martes 1 de septiembre del 2020"
+    "date": "Martes 1 de septiembre del 2020",
+    "link": ""
   },
   {
     "title": "Actividad 3: Mapa conceptual de los servicios, tecnologías y elementos que componen internet",
-    "evidence": "/images/evidence/placeholder.png",
+    "evidence": "/images/evidence/map.png",
     "description": "describir que hicieron como lo hicieron, etc.",
-    "date": "Martes 1 de septiembre del 2020"
+    "date": "Martes 1 de septiembre del 2020",
+    "link": ""
   },
   {
     "title": "Actividad 4: Describir que servicios, tecnologías y elementos has usado de internet.",
-    "evidence": "/images/evidence/placeholder.png",
+    "evidence": "/images/evidence/redes.jpg",
     "description": "describir que hicieron como lo hicieron, etc.",
-    "date": "Martes 1 de septiembre del 2020"
+    "date": "Martes 1 de septiembre del 2020",
+    "link": ""
   }
 ]

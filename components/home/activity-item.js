@@ -8,6 +8,11 @@ const ActivityItemStyled = styled.article`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'header header' 'image description' 'date date';
+  .link {
+    list-style: disc; 
+    color: blue;
+    font-size: 12px;
+  }
   .activity-wrapper {
     padding: .5rem;
   }
@@ -33,7 +38,7 @@ const ActivityItemStyled = styled.article`
   p, h4 {
     font-size: 14px;
     line-height: 16px;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
   }
   p, .activity-title {
     overflow: hidden;
@@ -76,12 +81,21 @@ const ActivityItemStyled = styled.article`
     .activity-wrapper, .activity-title {
       padding: .5rem .5rem .3rem;
     }
+    .link {
+      font-size: initial;
+    }
   }
   `
 
-function ActivityItem({ title, evidence, description, date }) {
+function ActivityItem({ title, evidence, description, date, link }) {
   function handleClick() {
-    alert(`Descripción: ${description}`)
+    if (!window.matchMedia('(min-width: 768px)').matches) {
+      if (link) {
+        alert(`Descripción: ${description} \n ${link}`)
+      } else {
+        alert(`Descripción: ${description}`)
+      }
+    }
   }
   return (
     <ActivityItemStyled>
@@ -92,6 +106,11 @@ function ActivityItem({ title, evidence, description, date }) {
       <div className="activity-desc">
         <div className="activity-wrapper">
           <p onClick={handleClick}><strong>Descripción: </strong>{description}</p>
+          {link && (
+            <>
+              <p><strong>Enlace: </strong><a target="_blank" className="link" href={link}>{link}</a></p>
+            </>
+          )}
         </div>
       </div>
       <h5 className="date">

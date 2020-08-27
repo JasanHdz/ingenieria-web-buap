@@ -34,7 +34,8 @@ function filterActivities(activity, value) {
   if (
     activity.title.toLowerCase().includes(value.toLowerCase()) ||
     activity.description.toLowerCase().includes(value.toLowerCase()) ||
-    activity.date.toLowerCase().includes(value.toLowerCase())
+    activity.date.toLowerCase().includes(value.toLowerCase()) ||
+    activity.link.toLowerCase().includes(value.toLowerCase())
   ) return activity
 }
 
@@ -61,6 +62,7 @@ function ActivityLog() {
             evidence={activity.evidence}
             description={activity.description}
             date={activity.date}
+            link={activity.link}
           />
         )))}
         {!activities.length && <ListEmpty />}
