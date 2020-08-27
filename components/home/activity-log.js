@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import ActivityItem from 'components/home/activity-item'
-import activities from 'activities.json'
+import SearchActivity from 'components/home/search-activity'
+import ListEmpty from 'components/home/list-empty'
+import activitiesArray from 'activities.json'
 
 const ActivityLogStyled = styled.section`
   margin: 1rem 0;
@@ -28,13 +30,31 @@ const ActivityLogStyled = styled.section`
     }
   }
 `
+function filterActivities(activity, value) {
+  if (
+    activity.title.toLowerCase().includes(value.toLowerCase()) ||
+    activity.description.toLowerCase().includes(value.toLowerCase()) ||
+    activity.date.toLowerCase().includes(value.toLowerCase())
+  ) return activity
+}
 
 function ActivityLog() {
+  const [activities, setActivities] = useState([...activitiesArray])
+  const [inputValue, setInputValue] = useState('')
+  const handleInputChange = event => {
+    const value = event.target.value
+    setInputValue(value)
+    setActivities(activitiesArray.filter(item => filterActivities(item, value)))
+  }
   return (
-    <ActivityLogStyled>
+    <ActivityLogStyled id="activities">
       <h2>Actividades</h2>
+      <SearchActivity
+        inputHandleChange={handleInputChange}
+        inputValue={inputValue}
+      />
       <div className="activities-grid">
-        {activities.map((activity, index) => (
+        {activities && (activities.map((activity, index) => (
           <ActivityItem
             key={index}
             title={activity.title}
@@ -42,7 +62,8 @@ function ActivityLog() {
             description={activity.description}
             date={activity.date}
           />
-        ))}
+        )))}
+        {!activities.length && <ListEmpty />}
       </div>
     </ActivityLogStyled>
   )

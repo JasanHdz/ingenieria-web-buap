@@ -9,7 +9,7 @@ const menux = [
   },
   {
     title: 'Prácticas',
-    url: '/#practicas'
+    url: '/#activities'
   },
   {
     title: 'Proyecto',
