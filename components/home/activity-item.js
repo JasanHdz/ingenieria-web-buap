@@ -87,7 +87,7 @@ const ActivityItemStyled = styled.article`
   }
   `
 
-function ActivityItem({ title, evidence, description, date, link }) {
+function ActivityItem({ title, evidence, description, date, link, name }) {
   function handleClick() {
     if (!window.matchMedia('(min-width: 768px)').matches) {
       if (link) {
@@ -108,7 +108,7 @@ function ActivityItem({ title, evidence, description, date, link }) {
           <p onClick={handleClick}><strong>Descripción: </strong>{description}</p>
           {link && (
             <>
-              <p><strong>Enlace: </strong><a target="_blank" className="link" href={link}>{link}</a></p>
+              <p><strong>Enlace: </strong><a target="_blank" className="link" href={link}>{name}</a></p>
             </>
           )}
         </div>

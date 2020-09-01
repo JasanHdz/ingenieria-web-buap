@@ -4,27 +4,31 @@
     "evidence": "/images/evidence/website.png",
     "description": "La practica consiste en realizar una página web (portafolio de actividades), para llevar un registro de actividades, la cuál debe ser servida desde un host. Nuestro equipo construyo un servidor en NodeJS para servir el html y css del sitio web, el cual fue alojado en servicio en la nube de vercel.com, en donde vercel nos brinda un host seguro.",
     "date": "Viernes 21 de agosto del 2020",
+    "linkName": "ingenieria-web.vercel.app",
     "link": "https://ingenieria-web.vercel.app/"
   },
   {
     "title": "Actividad 2: Linea de tiempo de la historia de internet",
-    "evidence": "/images/evidence/time-line.jpg",
-    "description": "describir que hicieron como lo hicieron, etc.",
+    "evidence": "/images/evidence/line-time.png",
+    "description": "Se buscaron los creadores de internet, los protocolos, los primeros servicios y tecnologías que se utilizan principalmente para el desarrollo de páginas web y se utilizó word para realizar la linea de tiempo",
     "date": "Martes 1 de septiembre del 2020",
-    "link": ""
+    "linkName": "Linea de Tiempo PDF",
+    "link": "/files/TiempoINTERNET.pdf"
   },
   {
     "title": "Actividad 3: Mapa conceptual de los servicios, tecnologías y elementos que componen internet",
-    "evidence": "/images/evidence/map.png",
-    "description": "describir que hicieron como lo hicieron, etc.",
+    "evidence": "/files/mapa-conceptual-internet.png",
+    "description": "Se investigo los componentes principales del Internet y como en conjunto brindan toda la información y servicios que utilizamos actualmente, se utilizó Flowchart para hacer el mapa",
     "date": "Martes 1 de septiembre del 2020",
-    "link": ""
+    "linkName": "Mapa conceptual",
+    "link": "/files/mapa-conceptual-internet.png"
   },
   {
     "title": "Actividad 4: Describir que servicios, tecnologías y elementos has usado de internet.",
     "evidence": "/images/evidence/redes.jpg",
-    "description": "describir que hicieron como lo hicieron, etc.",
+    "description": "Se discutió en equipo las principales servicios de internet y tecnologías que usamos mucho hoy en día, y se hizo un documento word describiendo el resultado de la conversación que se tuve anteriormente.",
     "date": "Martes 1 de septiembre del 2020",
-    "link": ""
+    "linkName": "Descripción de servicios",
+    "link": "/files/description-services.pdf"
   }
 ]

@@ -63,6 +63,7 @@ function ActivityLog() {
             description={activity.description}
             date={activity.date}
             link={activity.link}
+            name={activity.linkName}
           />
         )))}
         {!activities.length && <ListEmpty />}
