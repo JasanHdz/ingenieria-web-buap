@@ -35,10 +35,13 @@ const ActivityItemStyled = styled.article`
       object-fit: cover;
     }
   }
-  p, h4 {
+  p, h4, .activity-title {
     font-size: 14px;
     line-height: 16px;
     -webkit-line-clamp: 3;
+  }
+  p {
+    -webkit-line-clamp: 5;
   }
   p, .activity-title {
     overflow: hidden;
@@ -48,9 +51,6 @@ const ActivityItemStyled = styled.article`
   .activity-title, .date {
     text-align: center;
     color: #283E71;
-  }
-  .activity-title {
-    -webkit-line-clamp: 2;
   }
   .activity-wrapper, .activity-title {
     padding: .28rem;

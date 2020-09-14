@@ -1,19 +1,25 @@
 [
   {
-    "title": "Actividad 1: Página Web",
-    "evidence": "/images/evidence/website.png",
-    "description": "La practica consiste en realizar una página web (portafolio de actividades), para llevar un registro de actividades, la cuál debe ser servida desde un host. Nuestro equipo construyo un servidor en NodeJS para servir el html y css del sitio web, el cual fue alojado en servicio en la nube de vercel.com, en donde vercel nos brinda un host seguro.",
-    "date": "Viernes 21 de agosto del 2020",
-    "linkName": "ingenieria-web.vercel.app",
-    "link": "https://ingenieria-web.vercel.app/"
+    "title": "Actividad 6: Realizar una investigación de las metodologías agiles existentes para el desarrollo de sistemas computacionales",
+    "evidence": "/images/evidence/agile.jpg",
+    "description": "Se investigaron las metodologías de las más basicas a las más populares aplicadas en el desarrollo de software dentro de está se acordo a usar SCRUM por la flexibilidad que tiene y sus ventajas para el proyecto a desarrollar",
+    "date": "Lunes 14 de septiembre del 2020",
+    "linkName": "Cuadro comparativo",
+    "link": "/files/MetodologíasAgil.pdf"
   },
   {
-    "title": "Actividad 2: Linea de tiempo de la historia de internet",
-    "evidence": "/images/evidence/line-time.png",
-    "description": "Se buscaron los creadores de internet, los protocolos, los primeros servicios y tecnologías que se utilizan principalmente para el desarrollo de páginas web y se utilizó word para realizar la linea de tiempo",
+    "title": "Actividad 5: Cuestionario de Autoevaluación de la unidad",
+    "evidence": "/images/evidence/blackboard.png",
+    "description": "Se realizó un cuestionario de autoevaluación de Introducción a la Ingeniería Web en BlackBoard",
+    "date": "Lunes 7 de septiembre del 2020"
+  },
+  {
+    "title": "Actividad 4: Describir que servicios, tecnologías y elementos has usado de internet.",
+    "evidence": "/images/evidence/redes.jpg",
+    "description": "Se discutió en equipo los principales servicios de internet y tecnologías que usamos mucho hoy en día, y se hizo un documento word describiendo el resultado de la conversación que se tuvo anteriormente.",
     "date": "Martes 1 de septiembre del 2020",
-    "linkName": "Linea de Tiempo PDF",
-    "link": "/files/TiempoINTERNET.pdf"
+    "linkName": "Descripción de servicios",
+    "link": "/files/description-services.pdf"
   },
   {
     "title": "Actividad 3: Mapa conceptual de los servicios, tecnologías y elementos que componen internet",
@@ -24,11 +30,19 @@
     "link": "/files/mapa-conceptual.pdf"
   },
   {
-    "title": "Actividad 4: Describir que servicios, tecnologías y elementos has usado de internet.",
-    "evidence": "/images/evidence/redes.jpg",
-    "description": "Se discutió en equipo los principales servicios de internet y tecnologías que usamos mucho hoy en día, y se hizo un documento word describiendo el resultado de la conversación que se tuvo anteriormente.",
+    "title": "Actividad 2: Linea de tiempo de la historia de internet",
+    "evidence": "/images/evidence/line-time.png",
+    "description": "Se buscaron los creadores de internet, los protocolos, los primeros servicios y tecnologías que se utilizan principalmente para el desarrollo de páginas web y se utilizó word para realizar la linea de tiempo",
     "date": "Martes 1 de septiembre del 2020",
-    "linkName": "Descripción de servicios",
-    "link": "/files/description-services.pdf"
+    "linkName": "Linea de Tiempo PDF",
+    "link": "/files/TiempoINTERNET.pdf"
+  },
+  {
+    "title": "Actividad 1: Página Web",
+    "evidence": "/images/evidence/website.png",
+    "description": "La practica consiste en realizar una página web (portafolio de actividades), para llevar un registro de actividades, la cuál debe ser servida desde un host. Nuestro equipo construyo un servidor en NodeJS para servir el html y css del sitio web, el cual fue alojado en servicio en la nube de vercel.com, en donde vercel nos brinda un host seguro.",
+    "date": "Viernes 21 de agosto del 2020",
+    "linkName": "ingenieria-web.vercel.app",
+    "link": "https://ingenieria-web.vercel.app/"
   }
 ]
